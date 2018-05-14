@@ -29,15 +29,16 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/venues/master/_listings/meetup/recommended-venues-get.md
-- name: Meetup Find Venues
-  description: Returns list of venues based on location
+- name: Meetup Recommended Venues
+  description: Returns venues Meetup finds relevant to you based on location and category.
+    This method does not yet support sorting or pagination.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Meetup-Logo-1-med1.jpg
   humanURL: http://www.meetup.com/
   baseURL: https://api.meetup.com//
   tags: Venues
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/venues/master/_listings/meetup/find-venues-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/venues/master/_listings/meetup/recommended-venues-get.md
 x-common:
 - type: x-base
   url: http://api.meetup.com
