@@ -3,8 +3,8 @@ swagger: "2.0"
 x-collection-name: Eventbrite
 x-complete: 0
 info:
-  title: Eventbrite Post Venues
-  description: Creates a new venue with associated address.
+  title: Eventbrite Get User List Venues
+  description: This method lists the venues created by this user. Requires authentication.
   version: 1.0.0
 host: www.eventbrite.com
 basePath: /%7Bdata-type%7D/
@@ -234,6 +234,57 @@ paths:
         200:
           description: OK
       tags:
+      - Venues
+  /venues/{id}/events/:
+    get:
+      summary: Get Venues Events
+      description: Returns events of a given venue.
+      operationId: getVenuesEvents
+      x-api-path-slug: venuesidevents-get
+      parameters:
+      - in: query
+        name: only_public
+        description: Only show public events even if viewing your own events
+        type: query
+      - in: query
+        name: order_by
+        description: 'How to order the results (Valid choices are: start_asc, start_desc,
+          created_asc, or created_desc)'
+        type: query
+      - in: query
+        name: start_date.range_end
+        description: Only return events with start dates before the given date
+        type: query
+      - in: query
+        name: start_date.range_start
+        description: Only return events with start dates after the given date
+        type: query
+      - in: query
+        name: status
+        description: Only return events with a specific status set
+        type: query
+      responses:
+        200:
+          description: OK
+      tags:
+      - Venues
+      - Events
+  /user_list_venues:
+    get:
+      summary: Get User List Venues
+      description: This method lists the venues created by this user. Requires authentication.
+      operationId: Get_user_list_venues_
+      x-api-path-slug: user-list-venues-get
+      parameters:
+      - in: query
+        name: data-type
+        description: xml or json data-types are supported
+      responses:
+        200:
+          description: OK
+      tags:
+      - User
+      - List
       - Venues
 x-streamrank:
   polling_total_time_average: 0

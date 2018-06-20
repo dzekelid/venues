@@ -1,44 +1,37 @@
 ---
 name: Eventbrite
 x-slug: eventbrite
-description: Eventbrite believes that anyone can be an event organizer. That&rsquo;s
-  why they offer tools that make it easy to sell tickets to all kinds of events whether
-  it&rsquo;s a photography class or a sold-out concert, an inspiring conference or
-  an air-guitar competition. With Eventbrite, organizers can create a customizable
-  event page; spread the word with social media; collect money; and gain visibility
-  into attendees and sales. Eventbrite is for anyone planning or attending an event.
-  It empowers event organizers to become more efficient and effective when bringing
-  people together. And people everywhere are searching Eventbrite to discover great
-  events that matter to them.
-image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/eventbritelogoff8000gradient.png
+description: Eventbrite brings people together through live experiences. Discover
+  events that match your passions, or create your own with online ticketing tools.
+image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/193-eventbrite.jpg
 x-kinRank: "9"
-x-alexaRank: ""
+x-alexaRank: "643"
 tags: Venues
-created: "2018-05-20"
-modified: "2018-05-20"
+created: "2018-06-20"
+modified: "2018-06-20"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/venues/master/_listings/eventbrite/apis.md
 specificationVersion: "0.14"
 apis:
-- name: Eventbrite Get Users  Venues
+- name: Eventbrite Get Users Venues
   x-api-slug: eventbrite
   description: Returns a paginated response of venue objects that are owned by the
     user.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/eventbritelogoff8000gradient.png
-  humanURL: http://developer.eventbrite.com/
-  baseURL: https://www.eventbriteapi.com//v3//users/{id}/venues/
-  tags: Users,,Venues
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/193-eventbrite.jpg
+  humanURL: http://eventbriteapi.com
+  baseURL: https://www.eventbrite.com//%7Bdata-type%7D///users/{id}/venues/
+  tags: Users,Venues
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/venues/master/_listings/eventbrite/usersidvenues-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/venues/master/_listings/eventbrite/usersidvenues-get-openapi.md
-- name: Eventbrite Add Organizations  Venues
+- name: Eventbrite Post Organizations Venues
   x-api-slug: eventbrite
   description: Creates new venue objects under an organization and returns it as venue.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/eventbritelogoff8000gradient.png
-  humanURL: http://developer.eventbrite.com/
-  baseURL: https://www.eventbriteapi.com//v3//organizations/{id}/venues/
-  tags: Organizations,,Venues
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/193-eventbrite.jpg
+  humanURL: http://eventbriteapi.com
+  baseURL: https://www.eventbrite.com//%7Bdata-type%7D///organizations/{id}/venues/
+  tags: Organizations,Venues
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/venues/master/_listings/eventbrite/organizationsidvenues-post-postman.md
@@ -47,65 +40,68 @@ apis:
 - name: Eventbrite Get Venues
   x-api-slug: eventbrite
   description: Returns a venue object.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/eventbritelogoff8000gradient.png
-  humanURL: http://developer.eventbrite.com/
-  baseURL: https://www.eventbriteapi.com//v3//venues/{id}/
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/193-eventbrite.jpg
+  humanURL: http://eventbriteapi.com
+  baseURL: https://www.eventbrite.com//%7Bdata-type%7D///venues/{id}/
   tags: Venues
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/venues/master/_listings/eventbrite/venuesid-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/venues/master/_listings/eventbrite/venuesid-get-openapi.md
-- name: Eventbrite Add Venues
+- name: Eventbrite Post Venues
   x-api-slug: eventbrite
   description: Updates a venue and returns it as an object.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/eventbritelogoff8000gradient.png
-  humanURL: http://developer.eventbrite.com/
-  baseURL: https://www.eventbriteapi.com//v3//venues/{id}/
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/193-eventbrite.jpg
+  humanURL: http://eventbriteapi.com
+  baseURL: https://www.eventbrite.com//%7Bdata-type%7D///venues/{id}/
   tags: Venues
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/venues/master/_listings/eventbrite/venuesid-post-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/venues/master/_listings/eventbrite/venuesid-post-openapi.md
-- name: Eventbrite Add Venues
+- name: Eventbrite Post Venues
   x-api-slug: eventbrite
   description: Creates a new venue with associated address.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/eventbritelogoff8000gradient.png
-  humanURL: http://developer.eventbrite.com/
-  baseURL: https://www.eventbriteapi.com//v3//venues/
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/193-eventbrite.jpg
+  humanURL: http://eventbriteapi.com
+  baseURL: https://www.eventbrite.com//%7Bdata-type%7D///venues/
   tags: Venues
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/venues/master/_listings/eventbrite/venues-post-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/venues/master/_listings/eventbrite/venues-post-openapi.md
-- name: Eventbrite Get Venues  Events
+- name: Eventbrite Get Venues Events
   x-api-slug: eventbrite
   description: Returns events of a given venue.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/eventbritelogoff8000gradient.png
-  humanURL: http://developer.eventbrite.com/
-  baseURL: https://www.eventbriteapi.com//v3//venues/{id}/events/
-  tags: Venues,,Events
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/193-eventbrite.jpg
+  humanURL: http://eventbriteapi.com
+  baseURL: https://www.eventbrite.com//%7Bdata-type%7D///venues/{id}/events/
+  tags: Venues,Events
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/venues/master/_listings/eventbrite/venuesidevents-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/venues/master/_listings/eventbrite/venuesidevents-get-openapi.md
+- name: Eventbrite Get User List Venues
+  x-api-slug: eventbrite
+  description: This method lists the venues created by this user. Requires authentication.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/193-eventbrite.jpg
+  humanURL: http://eventbriteapi.com
+  baseURL: https://www.eventbrite.com//%7Bdata-type%7D///user_list_venues
+  tags: User,List,Venues
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/venues/master/_listings/eventbrite/user-list-venues-get-openapi.md
 - name: Eventbrite
   x-api-slug: eventbrite
-  description: Eventbrite believes that anyone can be an event organizer. That&rsquo;s
-    why they offer tools that make it easy to sell tickets to all kinds of events
-    whether it&rsquo;s a photography class or a sold-out concert, an inspiring conference
-    or an air-guitar competition. With Eventbrite, organizers can create a customizable
-    event page; spread the word with social media; collect money; and gain visibility
-    into attendees and sales. Eventbrite is for anyone planning or attending an event.
-    It empowers event organizers to become more efficient and effective when bringing
-    people together. And people everywhere are searching Eventbrite to discover great
-    events that matter to them.
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/eventbritelogoff8000gradient.png
-  humanURL: http://developer.eventbrite.com/
-  baseURL: https://www.eventbriteapi.com//v3
+  description: Eventbrite brings people together through live experiences. Discover
+    events that match your passions, or create your own with online ticketing tools.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/193-eventbrite.jpg
+  humanURL: http://eventbriteapi.com
+  baseURL: https://www.eventbrite.com//%7Bdata-type%7D/
   tags: Venues
   properties:
   - type: x-openapi-spec
@@ -123,6 +119,8 @@ x-common:
   url: http://blog.eventbrite.com/feed/
 - type: x-crunchbase
   url: http://www.crunchbase.com/company/eventbrite
+- type: x-crunchbase
+  url: https://crunchbase.com/organization/eventbrite
 - type: x-developer
   url: https://developer.eventbrite.com/
 - type: x-github
@@ -131,7 +129,7 @@ x-common:
   url: http://help.eventbrite.com/customer/en_us/portal/articles/428604
 - type: x-privacy
   url: http://www.eventbrite.com/privacypolicy
-- type: x-sdksio
+- type: x-sdks-io
   url: https://sdks.io/SDK/View/eventbrite
 - type: x-selfservice-registration
   url: https://www.eventbrite.com/signup/?referrer=%2F%3Fshow_onboarding%3D1&user_type=prebuyer&user_type_sig=AH_ElWGNJ_zHaAxwjzt5jiCRmvPvNBsy6w
@@ -139,8 +137,14 @@ x-common:
   url: http://www.eventbrite.com/tos
 - type: x-twitter
   url: https://twitter.com/EventbriteAPI
+- type: x-twitter
+  url: https://twitter.com/eventbrite
+- type: x-website
+  url: http://eventbriteapi.com
 - type: x-website
   url: http://developer.eventbrite.com/
+- type: x-website
+  url: http://eventbrite.com
 include: []
 maintainers:
 - FN: Kin Lane

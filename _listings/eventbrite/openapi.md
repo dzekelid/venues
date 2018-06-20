@@ -4,10 +4,10 @@ x-collection-name: Eventbrite
 x-complete: 1
 info:
   title: Eventbrite
-  description: the-eventbrite-api-is-the-best-way-to-integrate-and-extend-eventbrite-for-your-event-or-organising-needs-version-3-of-the-api-brings-you-faster-responses-consistent-data-types-more-endpoints-and-easier-debugging-and-testing
+  description: create-manage--promote-events--add-eventmanagement-features-to-your-site--show-the-world-what-exciting-things-are-happening-around-them-
   version: 1.0.0
-host: www.eventbriteapi.com
-basePath: /v3
+host: www.eventbrite.com
+basePath: /%7Bdata-type%7D/
 schemes:
 - http
 produces:
@@ -17,7 +17,7 @@ consumes:
 paths:
   /users/{id}/venues/:
     get:
-      summary: Get Users  Venues
+      summary: Get Users Venues
       description: Returns a paginated response of venue objects that are owned by
         the user.
       operationId: getUsersVenues
@@ -27,11 +27,10 @@ paths:
           description: OK
       tags:
       - Users
-      - ""
       - Venues
   /organizations/{id}/venues/:
     post:
-      summary: Add Organizations  Venues
+      summary: Post Organizations Venues
       description: Creates new venue objects under an organization and returns it
         as venue.
       operationId: postOrganizationsVenues
@@ -95,7 +94,6 @@ paths:
           description: OK
       tags:
       - Organizations
-      - ""
       - Venues
   /venues/{id}/:
     get:
@@ -109,7 +107,7 @@ paths:
       tags:
       - Venues
     post:
-      summary: Add Venues
+      summary: Post Venues
       description: Updates a venue and returns it as an object.
       operationId: postVenues
       x-api-path-slug: venuesid-post
@@ -174,7 +172,7 @@ paths:
       - Venues
   /venues/:
     post:
-      summary: Add Venues
+      summary: Post Venues
       description: Creates a new venue with associated address.
       operationId: postVenues
       x-api-path-slug: venues-post
@@ -239,7 +237,7 @@ paths:
       - Venues
   /venues/{id}/events/:
     get:
-      summary: Get Venues  Events
+      summary: Get Venues Events
       description: Returns events of a given venue.
       operationId: getVenuesEvents
       x-api-path-slug: venuesidevents-get
@@ -270,6 +268,22 @@ paths:
           description: OK
       tags:
       - Venues
-      - ""
       - Events
+  /user_list_venues:
+    get:
+      summary: Get User List Venues
+      description: This method lists the venues created by this user. Requires authentication.
+      operationId: Get_user_list_venues_
+      x-api-path-slug: user-list-venues-get
+      parameters:
+      - in: query
+        name: data-type
+        description: xml or json data-types are supported
+      responses:
+        200:
+          description: OK
+      tags:
+      - User
+      - List
+      - Venues
 ---

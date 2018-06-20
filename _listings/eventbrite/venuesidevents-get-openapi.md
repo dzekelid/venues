@@ -3,11 +3,11 @@ swagger: "2.0"
 x-collection-name: Eventbrite
 x-complete: 0
 info:
-  title: Eventbrite Get Venues  Events
+  title: Eventbrite Get Venues Events
   description: Returns events of a given venue.
   version: 1.0.0
-host: www.eventbriteapi.com
-basePath: /v3
+host: www.eventbrite.com
+basePath: /%7Bdata-type%7D/
 schemes:
 - http
 produces:
@@ -17,7 +17,7 @@ consumes:
 paths:
   /users/{id}/venues/:
     get:
-      summary: Get Users  Venues
+      summary: Get Users Venues
       description: Returns a paginated response of venue objects that are owned by
         the user.
       operationId: getUsersVenues
@@ -27,11 +27,10 @@ paths:
           description: OK
       tags:
       - Users
-      - ""
       - Venues
   /organizations/{id}/venues/:
     post:
-      summary: Add Organizations  Venues
+      summary: Post Organizations Venues
       description: Creates new venue objects under an organization and returns it
         as venue.
       operationId: postOrganizationsVenues
@@ -95,7 +94,6 @@ paths:
           description: OK
       tags:
       - Organizations
-      - ""
       - Venues
   /venues/{id}/:
     get:
@@ -109,7 +107,7 @@ paths:
       tags:
       - Venues
     post:
-      summary: Add Venues
+      summary: Post Venues
       description: Updates a venue and returns it as an object.
       operationId: postVenues
       x-api-path-slug: venuesid-post
@@ -174,7 +172,7 @@ paths:
       - Venues
   /venues/:
     post:
-      summary: Add Venues
+      summary: Post Venues
       description: Creates a new venue with associated address.
       operationId: postVenues
       x-api-path-slug: venues-post
@@ -239,7 +237,7 @@ paths:
       - Venues
   /venues/{id}/events/:
     get:
-      summary: Get Venues  Events
+      summary: Get Venues Events
       description: Returns events of a given venue.
       operationId: getVenuesEvents
       x-api-path-slug: venuesidevents-get
@@ -270,7 +268,6 @@ paths:
           description: OK
       tags:
       - Venues
-      - ""
       - Events
 x-streamrank:
   polling_total_time_average: 0
