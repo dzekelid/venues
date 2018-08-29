@@ -1,4 +1,3 @@
----
 swagger: "2.0"
 x-collection-name: Eventbrite
 x-complete: 1
@@ -286,4 +285,104 @@ paths:
       - User
       - List
       - Venues
----
+  /venue_get:
+    get:
+      summary: Get Venue Get
+      description: This method returns a single venue by id.
+      operationId: Get_venue_get_
+      x-api-path-slug: venue-get-get
+      parameters:
+      - in: query
+        name: data-type
+        description: xml or json data-types are supported
+      - in: query
+        name: id
+        description: The venue id
+      responses:
+        200:
+          description: OK
+      tags:
+      - Venue
+      - Get
+  /venue_new:
+    get:
+      summary: Get Venue New
+      description: This method creates a new venue. It returns the ID of the newly
+        created venue.
+      operationId: Get_venue_new_
+      x-api-path-slug: venue-new-get
+      parameters:
+      - in: query
+        name: adress
+        description: The venue address (line 1)
+      - in: query
+        name: adress_2
+        description: The venue address (line 2)
+      - in: query
+        name: city
+        description: The venue city
+      - in: query
+        name: country_code
+        description: 2-letter country code, according to the ISO 3166 format
+      - in: query
+        name: data-type
+        description: xml or json data-types are supported
+      - in: query
+        name: organizer_id
+        description: The ID of the related organizer
+      - in: query
+        name: postal_code
+        description: The postal code of the venue
+      - in: query
+        name: region
+        description: The venue state/province/county/territory depending on the country
+      - in: query
+        name: venue
+        description: The venue name
+      responses:
+        200:
+          description: OK
+      tags:
+      - Venue
+      - New
+  /venue_update:
+    get:
+      summary: Get Venue Update
+      description: This method updates an existing venue. Only the fields passed as
+        arguments will be modified. It returns the ID of the updated venue.
+      operationId: Get_venue_update_
+      x-api-path-slug: venue-update-get
+      parameters:
+      - in: query
+        name: adress
+        description: The venue address (line 1)
+      - in: query
+        name: adress_2
+        description: The venue address (line 2)
+      - in: query
+        name: city
+        description: The venue city
+      - in: query
+        name: country_code
+        description: 2-letter country code, according to the ISO 3166 format
+      - in: query
+        name: data-type
+        description: xml or json data-types are supported
+      - in: query
+        name: id
+        description: The venue ID
+      - in: query
+        name: postal_code
+        description: The postal code of the venue
+      - in: query
+        name: region
+        description: The venue state/province/county/territory depending on the country
+      - in: query
+        name: venue
+        description: The venue name
+      responses:
+        200:
+          description: OK
+      tags:
+      - Venue
+      - Update

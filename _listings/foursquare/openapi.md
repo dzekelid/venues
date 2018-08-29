@@ -1,10 +1,8 @@
----
 swagger: "2.0"
 x-collection-name: Foursquare
 x-complete: 1
 info:
   title: Foursquare
-  description: checkin-explore-your-city-and-connect-people-and-places-bapi-v2-b
   version: 1.0.0
 host: api.foursquare.com
 basePath: /v2/
@@ -15,28 +13,6 @@ produces:
 consumes:
 - application/json
 paths:
-  /lists/{LIST_ID}/suggestvenues:
-    get:
-      summary: Get Lists Suggestvenues
-      description: /lists/{LIST_ID}/suggesttip
-      operationId: listslist-idsuggesttip
-      x-api-path-slug: listslist-idsuggestvenues-get
-      parameters:
-      - in: query
-        name: LIST_ID
-        description: Id for a user-created list
-      - in: path
-        name: LIST_ID
-      - in: query
-        name: v
-        description: All requests now accept a v=YYYYMMDD param, which indicates that
-          the client is up to date as of the specified date
-      responses:
-        200:
-          description: OK
-      tags:
-      - Lists
-      - Suggestvenues
   /pages/{PAGE_ID}/venues:
     get:
       summary: Get Pages Venues
@@ -802,4 +778,29 @@ paths:
       tags:
       - Venues
       - Tips
----
+  /venuegroups/{GROUP_ID}/addvenue:
+    post:
+      summary: Post Venuegroups Group Addvenue
+      description: /venuegroups/list
+      operationId: venuegroupslist
+      x-api-path-slug: venuegroupsgroup-idaddvenue-post
+      parameters:
+      - in: query
+        name: GROUP_ID
+        description: The ID of the venue group
+      - in: path
+        name: GROUP_ID
+      - in: query
+        name: v
+        description: All requests now accept a v=YYYYMMDD param, which indicates that
+          the client is up to date as of the specified date
+      - in: query
+        name: venueId
+        description: Comma-delimited list of venue IDs to add to the group
+      responses:
+        200:
+          description: OK
+      tags:
+      - Venuegroups
+      - Group
+      - Venue

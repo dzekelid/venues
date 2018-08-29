@@ -15,28 +15,6 @@ produces:
 consumes:
 - application/json
 paths:
-  /lists/{LIST_ID}/suggestvenues:
-    get:
-      summary: Get Lists Suggestvenues
-      description: /lists/{LIST_ID}/suggesttip
-      operationId: listslist-idsuggesttip
-      x-api-path-slug: listslist-idsuggestvenues-get
-      parameters:
-      - in: query
-        name: LIST_ID
-        description: Id for a user-created list
-      - in: path
-        name: LIST_ID
-      - in: query
-        name: v
-        description: All requests now accept a v=YYYYMMDD param, which indicates that
-          the client is up to date as of the specified date
-      responses:
-        200:
-          description: OK
-      tags:
-      - Lists
-      - Suggestvenues
   /pages/{PAGE_ID}/venues:
     get:
       summary: Get Pages Venues
